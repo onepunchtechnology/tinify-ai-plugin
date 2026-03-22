@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "tinify-ai": {
+      "command": "npx",
+      "args": ["-y", "@tinify-ai/mcp-server"]
+    }
+  }
+}

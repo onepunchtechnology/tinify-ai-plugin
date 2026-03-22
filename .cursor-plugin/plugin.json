@@ -1,0 +1,16 @@
+{
+  "name": "tinify-ai",
+  "displayName": "tinify.ai",
+  "description": "AI-powered image optimization — compress, resize, upscale, convert formats, and generate SEO metadata",
+  "version": "1.0.0",
+  "author": {
+    "name": "tinify.ai",
+    "url": "https://tinify.ai"
+  },
+  "homepage": "https://tinify.ai",
+  "repository": "https://github.com/onepunchtechnology/tinify-ai-plugin",
+  "license": "MIT",
+  "keywords": ["image", "optimization", "compression", "seo", "web-performance"],
+  "skills": "./skills/",
+  "rules": "./rules/"
+}
