@@ -4,7 +4,7 @@
 
 ### Added
 
-- Open Plugins manifest (`.plugin/plugin.json`) for Claude Code and GitHub Copilot
+- Claude Code manifest (`.claude-plugin/plugin.json`)
 - Cursor manifest (`.cursor-plugin/plugin.json`)
 - MCP server config (`.mcp.json`) using `@tinify-ai/mcp-server` via stdio
 - Skill: `optimize-images` — batch image optimization workflow
