@@ -110,8 +110,10 @@ The plugin provides these tools via the tinify-ai MCP server:
 |------|---------|------|
 | Guest | 20/day | Free, no signup |
 | Free | 50/day | Free with account |
-| Pro | 3,000/month | $9/month |
-| Max | 10,000/month | $29/month |
+| Starter | 1,000/month | $10/month |
+| Pro | 3,000/month | $29/month |
+| Max | 10,000/month | $89/month |
+| Enterprise | Custom | [Contact us](mailto:hello@tinify.ai) |
 
 Use the `status` tool to check your remaining credits. Use `login` to authenticate for more credits.
 
