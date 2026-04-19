@@ -2,7 +2,7 @@
 
 AI-powered image optimization for your coding workflow. Compress, resize, upscale, convert formats, and generate SEO metadata — all from your AI assistant.
 
-Works with **Claude Code**, **Cursor**, **GitHub Copilot**, and **ChatGPT**.
+Works with **Claude Code**, **Cursor**, and **GitHub Copilot CLI**.
 
 ## Installation
 
@@ -12,41 +12,36 @@ Works with **Claude Code**, **Cursor**, **GitHub Copilot**, and **ChatGPT**.
 claude /install-plugin https://github.com/onepunchtechnology/tinify-ai-plugin
 ```
 
+### GitHub Copilot CLI
+
+```bash
+copilot plugin install tinify-ai@awesome-copilot
+```
+
+> If you haven't registered the marketplace yet: `copilot plugin marketplace add github/awesome-copilot`
+
+Or install directly from GitHub:
+
+```bash
+copilot plugin install onepunchtechnology/tinify-ai-plugin
+```
+
 ### Cursor
 
 Install from the [Cursor Marketplace](https://cursor.com/marketplace) — search for "tinify.ai".
 
 Or add manually: clone this repo and load as a project plugin.
 
-### GitHub Copilot
-
-Install using the Open Plugins standard:
-
-```bash
-# Add to your project
-git submodule add https://github.com/onepunchtechnology/tinify-ai-plugin .plugins/tinify-ai
-```
-
-### ChatGPT
-
-ChatGPT connects to the remote MCP server directly (no plugin needed):
-
-1. Open ChatGPT → Settings → Developer Mode (beta)
-2. Add MCP Server → URL: `https://app.tinify.ai/mcp`
-3. Start chatting — the `optimize_image` tool is now available
-
-> Requires ChatGPT Pro, Team, Enterprise, or Edu tier.
-
 ## Requirements
 
-- **Node.js 18+** (for Claude Code, Cursor, GitHub Copilot installations)
+- **Node.js 18+**
 - No signup required — 20 free credits/day as guest
 
 ## Skills
 
-### optimize-images
+### `optimize-images`
 
-Batch-optimize images in your project. Audits file sizes, selects optimal formats, and compresses everything.
+Batch-optimize images in your project. Audits file sizes, selects optimal formats, and compresses everything with a before/after savings report.
 
 ```
 "Optimize all images in src/assets/"
@@ -54,7 +49,7 @@ Batch-optimize images in your project. Audits file sizes, selects optimal format
 "Convert all PNGs to WebP"
 ```
 
-### image-seo
+### `image-seo`
 
 Scan your codebase for images missing alt text and generate AI-powered SEO metadata.
 
@@ -64,9 +59,9 @@ Scan your codebase for images missing alt text and generate AI-powered SEO metad
 "Generate alt text for the product images"
 ```
 
-### web-performance-images
+### `web-performance-images`
 
-Audit and fix image-related Core Web Vitals issues (LCP, CLS, lazy loading).
+Audit and fix image-related Core Web Vitals issues: LCP hero images, CLS dimensions, and lazy loading.
 
 ```
 "Fix image performance issues in this project"
@@ -76,11 +71,11 @@ Audit and fix image-related Core Web Vitals issues (LCP, CLS, lazy loading).
 
 ## MCP Tools
 
-The plugin provides these tools via the tinify-ai MCP server:
+The plugin connects to the tinify-ai MCP server and exposes the following tools:
 
 | Tool | Description |
 |------|-------------|
-| `optimize_image` | Compress, resize, upscale, convert format, and generate SEO tags for an image |
+| `optimize_image` | Compress, resize, upscale, convert format, and generate SEO tags |
 | `status` | Check account tier, credits remaining, and reset time |
 | `login` | Authenticate via browser for more credits |
 | `logout` | Sign out and clear local session |
@@ -95,14 +90,14 @@ The plugin provides these tools via the tinify-ai MCP server:
 | `output_format` | enum | `jpg`, `png`, `webp`, `avif`, `gif`, `svg`, `ico`, `original` |
 | `output_width_px` | int | Target width in pixels |
 | `output_height_px` | int | Target height in pixels |
-| `output_upscale_factor` | 2 \| 4 | AI upscale factor (2x or 4x) |
+| `output_upscale_factor` | `2` \| `4` | AI upscale factor |
 | `output_resize_behavior` | enum | `pad` or `crop` (when both dimensions set) |
-| `output_seo_tag_gen` | boolean | Generate alt text, keywords, and SEO filename (default: true) |
+| `output_seo_tag_gen` | boolean | Generate alt text, keywords, and SEO filename (default: `true`) |
 | `output_file_size_limit` | int | Target max output file size in bytes |
 | `confirm_gif_cost` | boolean | Required to proceed with animated GIF processing after cost warning |
-| `gif_frame_limit` | int (1-100) | Max frames to process for animated GIFs (default: 100) |
+| `gif_frame_limit` | int (1–100) | Max frames to process for animated GIFs (default: `100`) |
 
-**Supported formats:** JPG, PNG, WebP, AVIF, GIF (animated), HEIC, TIFF, BMP, SVG, ICO (max 50 MB)
+**Supported input formats:** JPG, PNG, WebP, AVIF, GIF (animated), HEIC, TIFF, BMP, SVG, ICO — up to 50 MB.
 
 ## Pricing
 
@@ -121,7 +116,7 @@ Use the `status` tool to check your remaining credits. Use `login` to authentica
 
 - [tinify.ai](https://tinify.ai) — Web app
 - [npm package](https://www.npmjs.com/package/@tinify-ai/mcp-server) — Standalone MCP server
-- [GitHub](https://github.com/onepunchtechnology/tinify-ai-plugin) — This plugin
+- [GitHub](https://github.com/onepunchtechnology/tinify-ai-plugin) — This repo
 
 ## License
 
