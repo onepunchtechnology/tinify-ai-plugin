@@ -1,0 +1,19 @@
+{
+  "name": "tinify-ai-marketplace",
+  "owner": {
+    "name": "tinify.ai",
+    "email": "hello@tinify.ai"
+  },
+  "metadata": {
+    "description": "AI-powered image optimization for developers",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "tinify-ai",
+      "description": "AI-powered image optimization — compress, resize, upscale, convert formats, and generate SEO metadata.",
+      "version": "1.0.0",
+      "source": "."
+    }
+  ]
+}
