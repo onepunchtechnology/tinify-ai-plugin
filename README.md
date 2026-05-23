@@ -9,7 +9,7 @@ Works with **Claude Code**, **Cursor**, and **GitHub Copilot CLI**.
 ### Claude Code
 
 ```bash
-claude /install-plugin https://github.com/onepunchtechnology/tinify-ai-plugin
+claude /plugin install https://github.com/onepunchtechnology/tinify-ai-plugin
 ```
 
 ### GitHub Copilot CLI

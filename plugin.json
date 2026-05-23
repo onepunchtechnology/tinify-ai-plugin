@@ -1,4 +1,5 @@
 {
+  "_comment": "This file is for non-Claude Code platforms (e.g. Cursor). The Claude Code manifest lives at .claude-plugin/plugin.json.",
   "name": "tinify-ai",
   "description": "AI-powered image optimization — compress, resize, upscale, convert formats, and generate SEO metadata. Includes skills for project-wide image auditing, SEO, and web performance.",
   "version": "1.0.0",
